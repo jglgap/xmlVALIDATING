@@ -1,0 +1,11 @@
+<!ELEMENT Customers (customer+)>
+<!ELEMENT customer (name,lastname,email,numberOfComplaints,sales)>
+<!ATTLIST customer id NMTOKEN #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT numberOfComplaints (#PCDATA)>
+<!ELEMENT sales (#PCDATA|sale)*>
+<!ELEMENT sale (dataOfPurchase)>
+<!ATTLIST sale id CDATA #REQUIRED>
+<!ELEMENT dataOfPurchase EMPTY>

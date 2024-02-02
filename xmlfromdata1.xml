@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+<Customers>
+    <customer id="1">
+        <name>john</name>
+        <lastname>McKinley</lastname>
+        <email>john.mckinley@365careers.com</email>
+        <numberOfComplaints>0</numberOfComplaints>
+        <sales>
+            <sale id="">
+                <dataOfPurchase></dataOfPurchase>
+               <!-- <itemCode></itemCsode>-->
+            </sale>
+        </sales>
+    </customer>
+    <customer id="2">
+        <name>Elizabeth</name>
+        <lastname>McFarlane</lastname>
+        <email>e.macfarlane@365careers.com</email>
+        <numberOfComplaints>2</numberOfComplaints>
+        <sales>
+        </sales>
+    </customer>
+    <customer id="3">
+        <name>Kevin</name>
+        <lastname>Lawrence</lastname>
+        <email>kevin.lawrence@365careers.com</email>
+        <numberOfComplaints>1</numberOfComplaints>
+        <sales>
+        </sales>
+    </customer>
+    <customer id="4">
+        <name>Catherine</name>
+        <lastname>Winnfield</lastname>
+        <email>c.winnfield@365careers.com</email>
+        <numberOfComplaints>0</numberOfComplaints>
+        <sales>
+        </sales>
+    </customer>
+</Customers>

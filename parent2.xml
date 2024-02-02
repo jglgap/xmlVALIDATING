@@ -1,0 +1,8 @@
+<!DOCTYPE parent SYSTEM "parent2.dtd">
+<parent>
+    <son>Anxo</son>
+    <son>TETE</son>
+    <daughter>Nerea</daughter>
+    <daughter>Noria</daughter>
+    <daughter>mona</daughter>
+    </parent>
