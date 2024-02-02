@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE booklist [
+<!ELEMENT booklist (book)+>
+<!ELEMENT book (bookname*,author+,price?,homepage)>
+<!ELEMENT bookname (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT homepage (#PCDATA)>
+]>
+<!-- * (0,n)-->
+<!-- +(1,n)-->
+<!-- ? Puede haber o no-->
+<booklist>
+    <book>
+       <bookname>Los tres cerditos</bookname>
+        <author>Joseph Jacobs</author>
+        <price>14.20</price>
+        <homepage>15</homepage>    
+    </book>
+    <book>
+        <bookname>Antiheroes</bookname>
+        <author>Iria G. Parente</author>
+        <author>Selene M. Pascual</author>
+        <homepage>2</homepage>
+    </book>
+</booklist>
