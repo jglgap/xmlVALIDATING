@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE order [
+    <!ELEMENT order (tractor+)>
+    <!ELEMENT tractor (component+)>
+    <!ELEMENT component (deliveryDate,fragile,weigth,serialNumber,maximumKM?)>
+        <!ATTLIST component manufacturereName ID #REQUIRED>
+    <!ELEMENT deliveryDate (day?,month,year)>
+    <!ELEMENT day (#PCDATA)>
+    <!ELEMENT month (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT fragile (#PCDATA)>
+    <!ELEMENT weigth (#PCDATA)>
+        <!ATTLIST weigth unit NMTOKEN #REQUIRED>
+    <!ELEMENT serialNumber (#PCDATA)>
+    <!ELEMENT maximumKM (#PCDATA)>  
+]>
+<order>
+    <tractor>
+        <component manufacturereName="John_Deere">
+            
+            <deliveryDate>
+                <day>3</day>
+                <month>february</month>
+                <year>2020</year>
+            </deliveryDate>
+            <fragile>no</fragile>
+            <weigth unit="gram">800</weigth>
+            <serialNumber>6666666666</serialNumber>
+            <maximumKM>40000km</maximumKM>
+        </component>
+        <component manufacturereName="Landini">
+            <deliveryDate>
+                <month>July</month>
+                <year>2014</year>
+            </deliveryDate>
+            <fragile>no</fragile>
+            <weigth unit="kilo">4,2</weigth>
+            <serialNumber>22222222</serialNumber>
+            <maximumKM>100000km</maximumKM>
+        </component>
+    </tractor>
+    <tractor>
+        <component manufacturereName="Fendt">  
+            
+            <deliveryDate>
+                <day>2</day>
+                <month>october</month>
+                <year>2007</year>
+            </deliveryDate>
+            <fragile>yes</fragile>
+            <weigth unit="gram">640</weigth>
+            <serialNumber>4444444444</serialNumber>
+        </component>
+    </tractor>
+</order>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE game [
+    <!ELEMENT game (team+)>
+    <!ELEMENT team (players*)>
+        <!ATTLIST team name ID #REQUIRED>
+    <!ELEMENT players (goal*)> 
+        <!ATTLIST players playerName ID #REQUIRED>
+    <!ELEMENT goal (#PCDATA)>
+        <!ATTLIST goal type NMTOKEN #IMPLIED>
+ 
+    ]>
+<game>
+    <team name="Real_Madrid">
+        <players playerName="Beligol">
+            <goal type="penalty"></goal>
+        </players>
+        <players playerName="vini">
+            <goal type="normal"></goal>
+        </players>
+    </team>
+
+    <team name="FC_Badalona">
+    </team>
+</game>

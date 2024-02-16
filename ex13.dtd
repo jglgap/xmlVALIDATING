@@ -1,0 +1,12 @@
+<!ELEMENT bookDatabase (book+)>
+<!ATTLIST book bookID ID #REQUIRED>
+<!ELEMENT book (author+,image?,content+,newchapters*)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT content (chapter,description)>
+<!ATTLIST chapter number NMTOKEN #REQUIRED>
+<!ELEMENT chapter (#PCDATA)>
+<!ELEMENT description (section*,summary?)>
+<!ELEMENT section (#PCDATA)>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT newchapters (chapter,description)>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE artists [
+    <!ELEMENT artists (artist+,album)>
+    <!ELEMENT artist EMPTY>
+    <!ATTLIST artist name CDATA #REQUIRED>
+    <!ATTLIST artist artistID ID #REQUIRED>
+    <!ELEMENT album EMPTY>
+    <!ATTLIST album name CDATA #REQUIRED>
+    <!ATTLIST album albumArtistID IDREF #IMPLIED>
+    <!ATTLIST album contributingArtistIDs IDREFS #IMPLIED>
+]>
+
+<artists>
+    <artist name="Julio Iglesias"  artistID="one"></artist>
+    <artist name="none" artistID="zero"/>
+    <album name="De niña a mujer" albumArtistID="one" contributingArtistIDs="zero"/>
+</artists>
