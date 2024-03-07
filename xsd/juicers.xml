@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<juicers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="juicers.xsd">
+    <juicer>
+        <name>Pepe</name>
+        <image>chacha.jpg</image>
+        <description>blabla</description>
+        <warranty>titi</warranty>
+        <weight>10.0</weight>
+        <cost>1.4</cost>
+        <cost>3.2</cost>
+        <retailer>zumos paquito</retailer>
+    </juicer>
+</juicers>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="juicers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="juicer" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="image">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[a-z]+\.(jpg|png|jpge)" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string" />
+                            <xs:element name="warranty" type="xs:string" />
+                            <xs:element name="weight" type="money" />
+                            <xs:element name="cost" maxOccurs="unbounded" type="money" />
+                            <xs:element name="retailer" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="money">
+        <xs:restriction base="xs:decimal">
+           <xs:totalDigits value="4"/>
+           <xs:fractionDigits value="2"/>
+            <xs:pattern value="[0-9]{1,2}.[0-9]{1,2}"/>
+            <xs:whiteSpace value="collapse"/>
+            <xs:minExclusive value="0"/>
+            <xs:maxInclusive value="10"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

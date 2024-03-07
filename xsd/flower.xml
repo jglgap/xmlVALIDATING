@@ -1,0 +1,7 @@
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="flower.xsd">
+    <flower>Tulip</flower>
+    <flower>Cactus</flower>
+    <flower>Dandilion</flower>
+    <flower>Rose</flower>
+</flowers>

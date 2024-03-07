@@ -1,0 +1,22 @@
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="X.xsd">
+    <item>
+        <name>qe</name>
+        <photo>qe</photo>
+        <tags>qe</tags>
+        <diameter>4.2</diameter>
+        <price>4.2</price>
+        <weigth>4.2</weigth>
+        <enumeration>4.2</enumeration>
+        <size>big</size>
+    </item>
+    <item>
+        <name></name>
+        <photo></photo>
+        <tags></tags>
+        <diameter>4.2</diameter>
+        <price>4.2</price>
+        <weigth>4.2</weigth>
+        <enumeration>4.2</enumeration>
+    </item>
+</items>
