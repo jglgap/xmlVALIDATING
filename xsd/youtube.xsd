@@ -10,11 +10,11 @@
                                 <xs:complexType mixed="true">
                                     <xs:sequence>
                                         <xs:element name="url" type="xs:string" />
-                                        <xs:element name="views" type="xs:string" />
+                                        <xs:element name="views" type="viewsType" />
                                         <xs:element name="comments">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="good" type="xs:string" />
+                                                    <xs:element name="good" type="goodViewsType"/>
                                                     <xs:element name="bad" type="xs:string" />
                                                 </xs:sequence>
                                             </xs:complexType>
@@ -27,14 +27,16 @@
                                                             <xs:sequence>
                                                                 <xs:element name="subscriptionDate">
                                                                     <xs:complexType>
-                                                                        <xs:attribute name="day"
-                                                                            type="xs:integer"
-                                                                            use="required" />
-                                                                        <xs:attribute name="month"
-                                                                            use="required" />
-                                                                        <xs:attribute name="year"
-                                                                            type="xs:integer"
-                                                                            use="required" />
+                                                                        <xs:attribute name="day" type="xs:integer" use="required" />
+                                                                        <xs:attribute name="month" use="required" />
+                                                                        <xs:attribute name="year"  use="required">
+                                                                            <xs:simpleType>
+                                                                                <xs:restriction base="xs:integer">
+                                                                                    <xs:maxInclusive value="2023"/>
+                                                                                    <xs:minInclusive value="2020"/>
+                                                                                </xs:restriction>
+                                                                            </xs:simpleType>
+                                                                        </xs:attribute>
                                                                     </xs:complexType>
                                                                 </xs:element>
                                                                 <xs:element name="comments">
@@ -53,22 +55,27 @@
                                                                             <xs:element
                                                                                 name="server">
                                                                                 <xs:complexType>
-                                                                                    <xs:sequence>
-                                                                                        <xs:element
-                                                                                            name="gmail" />
-                                                                                    </xs:sequence>
+                                                                                   <xs:choice>
+                                                                                        <xs:element name="gmail" type="xs:string" />
+                                                                                        <xs:element name="hotmail" type="xs:string" />
+                                                                                        <xs:element name="iessanclemente.net" type="xs:string"/>
+                                                                                   </xs:choice>
                                                                                 </xs:complexType>
                                                                             </xs:element>
                                                                         </xs:sequence>
-                                                                        <xs:attribute
-                                                                            name="completo"
-                                                                            use="required" />
+                                                                        <xs:attribute name="completo" use="required" />
                                                                     </xs:complexType>
                                                                 </xs:element>
                                                                 <xs:element name="language"
                                                                     type="xs:string" />
                                                             </xs:sequence>
-                                                            <xs:attribute name="code" use="required" />
+                                                            <xs:attribute name="code" use="required">
+                                                                <xs:simpleType >
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:pattern value="[0-9]{2}\-{1}\[{1}[A-Z]{2}\]{1}\-{1}[0-9]{2}"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
@@ -104,8 +111,36 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="availableLanguages" type="xs:string" />
+                <xs:element name="availableLanguages"  >
+                    <xs:simpleType>
+                        <xs:list >
+                            <xs:simpleType >
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="French"/>
+                                    <xs:enumeration value="Italian"/>
+                                    <xs:enumeration value="German"/>
+                                    <xs:enumeration value="English"/>
+                                    <xs:enumeration value="Chinese"/>
+                                    <xs:enumeration value="Korean"/>
+                                    <xs:enumeration value="Japanese"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:list>
+                    </xs:simpleType>
+                    
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:simpleType name="viewsType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100000000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="goodViewsType">
+        <xs:restriction base="viewsType">
+          <xs:maxInclusive value=" 200000"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

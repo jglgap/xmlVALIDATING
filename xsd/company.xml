@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="company.xsd">
+    <generalInformation>
+        <name>XML technologies</name>
+        <numberEmployees>6</numberEmployees>
+        <multinational>NO</multinational>
+        <currency>euro</currency>
+        <sector>
+            <tecnology/>
+        </sector>
+    </generalInformation>
+
+
+    <depinfo date="2/03/2023">
+        <departments>
+            <code code="ADMIN">
+                <depName>administracion</depName>
+            </code>
+            <code code="COMPU">
+                <depName>computer</depName>
+            </code>
+            <code code="MARKE">
+                <depName>marketing</depName>
+            </code>
+        </departments>
+
+        <employeeINFO>
+            <employee code="ADMIN">
+                <nameSurname user="atorres"> Alicia Torres Pan</nameSurname>
+                <role>Head of Department</role>
+                <sickLeave>No</sickLeave>
+                <Salary>2250.00</Salary>
+                <key>3%abYki6</key>
+            </employee>
+
+            <employee code="ADMIN">
+                <nameSurname user="xaldrei"> Xoan Aldrei Soto</nameSurname>
+                <role>Employee</role>
+                <sickLeave>yes</sickLeave>
+                <Salary>1200.00</Salary>
+                <key>6@hjKm87</key>
+            </employee>
+
+            <employee code="ADMIN">
+                <nameSurname user="amotar">Ana Mota Rey</nameSurname>
+                <role>Employee</role>
+                <sickLeave>no</sickLeave>
+                <Salary>1250.00</Salary>
+                <key>4%wtrtHQ</key>
+            </employee>
+
+            <employee code="COMPU">
+                <nameSurname user="obaltar">Oscar Baltar Dacosta</nameSurname>
+                <role>Head of department</role>
+                <sickLeave>yes</sickLeave>
+                <Salary>2300.75</Salary>
+                <key>8$abcdHj</key>
+            </employee>
+
+            <employee code="COMPU">
+                <nameSurname user="hvilar">Helena Vilar</nameSurname>
+                <role>employee</role>
+                <sickLeave>no</sickLeave>
+                <Salary>1500.35</Salary>
+                <key>9?sdKp:s</key>
+            </employee>
+
+            <employee code="MARKE">
+                <nameSurname user="guest">Andrea Serodio Paz</nameSurname>
+                <role>Head of department</role>
+                <sickLeave>no</sickLeave>
+                <Salary>2500.85</Salary>
+                <key>2$xlzhYH</key>
+            </employee>
+        </employeeINFO>
+    </depinfo>
+</company>
